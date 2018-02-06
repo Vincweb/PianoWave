@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PianoWave</title>
+    <link rel="stylesheet" href="./piano.css">
+    <style>
+        html {
+            height: 100%;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PianoWave</h1>
+
+    <div class="container">
+        <div id="p-wrapper">
+            <ul id="piano">
+                <li>
+                    <div class="anchor" id="white1"></div>
+                </li>
+                <li>
+                    <div class="anchor" id="white1"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+                <li>
+                    <div class="anchor"></div>
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="position:absolute;z-index:-1"></canvas>
+    
+    <script src='lwgowr.js'></script>
+    <script  src="wave.js"></script>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
