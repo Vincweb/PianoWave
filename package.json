@@ -15,12 +15,5 @@
   "bugs": {
     "url": "https://github.com/Vincweb/PianoWave/issues"
   },
-  "homepage": "https://github.com/Vincweb/PianoWave#readme",
-  "dependencies": {
-    "js-svg-piano": "^1.0.0"
-  },
-  "devDependencies": {
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
-  }
+  "homepage": "https://github.com/Vincweb/PianoWave#readme"
 }

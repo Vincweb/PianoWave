@@ -6,93 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PianoWave</title>
-    <link rel="stylesheet" href="./piano.css">
     <style>
-        html {
-            height: 100%;
-            margin: 0px;
-            overflow: hidden;
-        }
-
+        html,
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            height: 100%;
+            height: 100vh;
+            margin: 0px;
         }
     </style>
 </head>
 
 <body>
-    <h1>PianoWave</h1>
+    <h1 style="text-align:center">PianoWave</h1>
 
-    <div class="container">
-        <div id="p-wrapper">
-            <ul id="piano">
-                <li>
-                    <div class="anchor" id="white1"></div>
-                </li>
-                <li>
-                    <div class="anchor" id="white1"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-                <li>
-                    <div class="anchor"></div>
-                    <span></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <canvas id="canvas" style="position:absolute;z-index:-1"></canvas>
+    <table style="width:100%">
+        <tr style="height:45vh">
+            <td style="width:50%">
+                <!-- Piano JS -->
+                <link rel="stylesheet" href="./assets/css/piano.css">
+                <div id="p-wrapper">
+                    <ul id="piano">
+                    </ul>
+                </div>
+                <script src="./assets/js/audiosynth.js"></script>
+                <script src="./assets/js/piano.js"></script>
+            </td>
+            <td style="width:50%">
+                <!-- Chart JS -->
+                <canvas id="myChart"></canvas>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+                <script src="./assets/js/chartADSR.js"></script>
+            </td>
+        </tr>
+        <tr style="height:45vh">
+            <td style="width:50%">
+                <!-- Oscilloscope JS -->
+                <canvas id="waves" style="width:100%;height:100%"></canvas>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+                <script src="https://isuttell.github.io/sine-waves/javascripts/sine-waves.min.js"></script>
+                <script src="./assets/js/oscilloscope.js"></script>
+            </td>
+            <td style="width:50%">
+                <!-- Table JS -->
     
-    <script src='lwgowr.js'></script>
-    <script  src="wave.js"></script>
-
-    <script src="bundle.js"></script>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
