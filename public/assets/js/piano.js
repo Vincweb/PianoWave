@@ -8,7 +8,7 @@ function pianoWave(Note) {
     var synth = new Tone.Synth({
         "oscillator": {
             "type": document.querySelector("#Oscillator").innerHTML,
-            "modulationFrequency": 0.2
+            "modulationFrequency": 0.9
         },
         "envelope": {
             "attack": document.querySelector("#Attack").innerHTML,
@@ -22,6 +22,31 @@ function pianoWave(Note) {
 
     synth.triggerAttackRelease(Note, document.querySelector("#Time").innerHTML);
 
+}
+
+function instrument(instrument) {
+    if (instrument == "Piano") {
+        document.querySelector('#Oscillator').innerHTML = "triangle";
+        document.querySelector('#Attack').innerHTML = "0.06";
+        document.querySelector('#Decay').innerHTML = "0.04";
+        document.querySelector('#Sustain').innerHTML = "0.5";
+        document.querySelector('#Release').innerHTML = "0.35";
+        document.querySelector('#AttackCurve').innerHTML = "linear";
+        document.querySelector('#ReleaseCurve').innerHTML = "linear";
+        document.querySelector('#Time').innerHTML = "0.5";
+        //document.querySelector('#Velocity').innerHTML = "0.7";
+    }
+    if (instrument == "Violon") {
+        document.querySelector('#Oscillator').innerHTML = "triangle";
+        document.querySelector('#Attack').innerHTML = "4";
+        document.querySelector('#Decay').innerHTML = "0";
+        document.querySelector('#Sustain').innerHTML = "0";
+        document.querySelector('#Release').innerHTML = "4";
+        document.querySelector('#AttackCurve').innerHTML = "sine";
+        document.querySelector('#ReleaseCurve').innerHTML = "sine";
+        document.querySelector('#Time').innerHTML = "8";
+        //document.querySelector('#Velocity').innerHTML = "80";
+    }
 }
 
 var Note = ["C", "D", "E", "F", "G", "A", "B"];
