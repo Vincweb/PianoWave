@@ -13,6 +13,8 @@
         crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <!-- Custom styles for this template -->
     <style>
         /* Sticky footer styles
@@ -80,6 +82,7 @@
             <table class="heavyTable" style="text-align:center">
                 <thead>
                     <tr>
+                        <th>Oscillator</th>
                         <th>Attack</th>
                         <th>Decay</th>
                         <th>Sustain</th>
@@ -87,29 +90,46 @@
                         <th>AttackCurve</th>
                         <th>ReleaseCurve</th>
                         <th>Time</th>
+                        <th>Velocity</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td id="Oscillator">sine</td>
                         <td id="Attack">0.02</td>
                         <td id="Decay">0.1</td>
                         <td id="Sustain">0.2</td>
                         <td id="Release">0.9</td>
                         <td id="AttackCurve">linear</td>
-                        <td id="ReleaseCurve">linear</td>
+                        <td id="ReleaseCurve">exponential</td>
                         <td id="Time">8n</td>
+                        <td id="Velocity">0.7</td>
                     </tr>
                 </tbody>
             </table>
-
             <script src="./assets/js/table.js"></script>
+
+            <div class="row" style="padding-top:20px">
+                <p>Valeurs possible (AttackCurve & ReleaseCurve)</p>
+                <p>
+                    <ul style="text-align:left">
+                        <li>linear</li>
+                        <li>exponential</li>
+                        <li>cosine</li>
+                        <li>sine</li>
+                        <li>step</li>
+                        <li>ripple</li>
+                        <li>bounce</li>
+                    </ul>
+                </p>
+            </div>
 
         </div>
     </div>
 
 
     <footer class="footer">
-        <div class="container">
+        <div class="container" style="text-align:center">
             <span class="text-muted">Created by Vincweb - PianoWave</span>
         </div>
     </footer>

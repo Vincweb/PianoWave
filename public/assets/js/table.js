@@ -92,3 +92,13 @@ $('.heavyTable').heavyTable({
     xPosition: 2,
     yPosition: 2
 });
+
+$(document).mouseup(function (e) {
+    var container = $(".heavyTable");
+    if (container.has(e.target).length === 0) {
+        if (document.querySelector('.selected')) {
+            document.querySelector('.selected').innerHTML = $('.selected input').val();
+            document.querySelector('.selected').classList.toggle("selected");
+        }
+    }
+});

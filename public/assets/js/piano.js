@@ -7,7 +7,7 @@ function pianoWave(Note) {
     //pass in some initial values for the filter and filter envelope
     var synth = new Tone.Synth({
         "oscillator": {
-            "type": "pwm",
+            "type": document.querySelector("#Oscillator").innerHTML,
             "modulationFrequency": 0.2
         },
         "envelope": {
