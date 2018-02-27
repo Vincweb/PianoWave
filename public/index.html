@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <!-- Custom styles for this template -->
     <style>
         /* Sticky footer styles
@@ -28,6 +29,7 @@
         body {
             /* Margin bottom by footer height */
             margin-bottom: 60px;
+            min-width: 680px;
         }
 
         .footer {
@@ -82,13 +84,19 @@
             <table class="heavyTable" style="text-align:center">
                 <thead>
                     <tr>
-                        <th>Oscillator</th>
+                        <th style="white-space:nowrap;">Oscillator
+                            <i class="fas fa-info-circle" data-toggle="modal" data-target="#myModalOscillator"></i>
+                        </th>
                         <th>Attack</th>
                         <th>Decay</th>
                         <th>Sustain</th>
                         <th>Release</th>
-                        <th>AttackCurve</th>
-                        <th>ReleaseCurve</th>
+                        <th style="white-space:nowrap;">AttackCurve
+                            <i class="fas fa-info-circle" data-toggle="modal" data-target="#myModalAttackCurve"></i>
+                        </th>
+                        <th style="white-space:nowrap;">ReleaseCurve
+                            <i class="fas fa-info-circle" data-toggle="modal" data-target="#myModalReleaseCurve"></i>
+                        </th>
                         <th>Time</th>
                         <th>Velocity</th>
                     </tr>
@@ -109,19 +117,90 @@
             </table>
             <script src="./assets/js/table.js"></script>
 
-            <div class="row" style="padding-top:20px">
-                <p>Valeurs possible (AttackCurve & ReleaseCurve)</p>
-                <p>
-                    <ul style="text-align:left">
-                        <li>linear</li>
-                        <li>exponential</li>
-                        <li>cosine</li>
-                        <li>sine</li>
-                        <li>step</li>
-                        <li>ripple</li>
-                        <li>bounce</li>
-                    </ul>
-                </p>
+            <div style="text-align:center;margin-top:20px;width: 100%;">
+                <img src="./assets/img/adsr.jpg" alt="ADSR" />
+            </div>
+
+
+            <!-- Modal -->
+            <div id="myModalOscillator" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Oscillator</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">sine</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">square</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">triangle</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">sawtooth</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">pwm</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#Oscillator').innerHTML = $(this).html();">pulse</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="myModalAttackCurve" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Oscillator</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">linear</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">exponential</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">cosine</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">sine</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">step</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">ripple</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#AttackCurve').innerHTML = $(this).html();">bounce</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="myModalReleaseCurve" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Oscillator</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">linear</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">exponential</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">cosine</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">sine</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">step</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">ripple</button>
+                                <button type="button" class="list-group-item" data-dismiss="modal" onclick="document.querySelector('#ReleaseCurve').innerHTML = $(this).html();">bounce</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>
