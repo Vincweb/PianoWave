@@ -1,2 +1,2 @@
 # PianoWave
-Piano with the oscilloscope 
+Piano with modification ADSR

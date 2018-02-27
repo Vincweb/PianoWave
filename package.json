@@ -1,7 +1,7 @@
 {
   "name": "pianowave",
   "version": "1.0.0",
-  "description": "Piano with the oscilloscope",
+  "description": "Pianowave",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
