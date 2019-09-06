@@ -44,7 +44,7 @@ function instrument(instrument) {
         document.querySelector('#Release').innerHTML = "4";
         document.querySelector('#AttackCurve').innerHTML = "sine";
         document.querySelector('#ReleaseCurve').innerHTML = "sine";
-        document.querySelector('#Time').innerHTML = "8";
+        document.querySelector('#Time').innerHTML = "1";
         //document.querySelector('#Velocity').innerHTML = "80";
     }
 }

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Vincweb/PianoWave/issues"
   },
-  "homepage": "https://github.com/Vincweb/PianoWave#readme"
+  "homepage": "https://github.com/Vincweb/PianoWave#readme",
+  "dependencies": {
+    "tone": "^13.8.25"
+  }
 }
